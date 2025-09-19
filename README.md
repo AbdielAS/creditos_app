@@ -49,29 +49,27 @@ registro-creditos/
 git clone https://github.com/tuusuario/creditos_app.git
 cd creditos_app
 ```
-
 ### 2️⃣ Crear entorno virtual (opcional pero recomendado)
-
+```bash
 python -m venv venv
-
+```
 #### Activar entorno virtual en Windows:
-
+```bash
 .\venv\Scripts\activate
-
+```
 #### Activar entorno virtual en Linux/Mac:
-
+```bash
 source venv/bin/activate
-
+```
 ### 3️⃣ Instalar dependencias
-
+```bash
 pip install flask
-
+```
 ### 4️⃣ Ejecutar servidor Flask
-
+```bash
 cd backend
-
 python app.py
-
+```
 ### 5️⃣ Abrir la app en el navegador
 
 http://127.0.0.1:5000
