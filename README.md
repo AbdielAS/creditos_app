@@ -46,7 +46,7 @@ registro-creditos/
 
 ### 1️⃣ Clonar el repositorio
 ```bash
-git clone https://github.com/tuusuario/creditos_app.git
+git clone https://github.com/AbdielAS/creditos_app.git
 cd creditos_app
 ```
 ### 2️⃣ Crear entorno virtual (opcional pero recomendado)
