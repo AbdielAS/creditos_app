@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Créditos</title>
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Librería Chart.js para gráficos -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Título principal de la aplicación -->
+        <div class="header">REGISTRO DE CRÉDITOS</div>
+        <!-- ===============================
+             Sección de formulario para ingresar o editar créditos
+             =============================== -->
+        <section id="form-section">
+            <form id="credito-form">
+                <!-- Nombre del cliente -->
+                <div class="form-datos-credito">
+                    <input type="text" id="cliente" class="form-input" required placeholder="">
+                    <label for="cliente" class="form-label">Cliente</label>
+                </div>
+                <!-- Monto del crédito -->
+                <div class="form-datos-credito">
+                    <input type="number" id="monto" class="form-input" required placeholder="">
+                    <label for="monto" class="form-label">Monto</label>
+                </div>
+                <!-- Tasa de interés anual -->
+                <div class="form-datos-credito">
+                    <input type="number" id="interes" class="form-input" required placeholder="">
+                    <label for="interes" class="form-label">Tasa de interés anual</label>
+                </div>
+                <!-- Plazo en meses -->
+                <div class="form-datos-credito">
+                    <input type="number" id="plazo" class="form-input" required placeholder="">
+                    <label for="plazo" class="form-label">Plazo (Meses)</label>
+                </div>
+                <!-- Fecha de otorgamiento del crédito -->
+                <div class="form-datos-credito">
+                    <input type="date" id="fecha" class="form-input" required placeholder="">
+                    <label for="fecha" class="form-label">Fecha de otorgamiento</label>
+                </div>
+                <!-- Botones de acción: Guardar o Cancelar -->
+                <div class="buttons-actions">
+                    <button type="submit" id="button-submit">Guardar</button>
+                    <!-- El botón cancelar solo aparece al editar -->
+                    <button type="button" id="button-cancel" style="display:none;">Cancelar</button>
+                </div>
+            </form>
+        </section>
+        <!-- ===============================
+             Sección de tabla de créditos registrados
+             =============================== -->
+        <div class="header">CRÉDITOS REGISTRADOS</div>
+        <section id="list-section">
+            <table id="tabla-creditos">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Cliente</th>
+                        <th>Monto</th>
+                        <th>Tasa Interés (%)</th>
+                        <th>Plazo (meses)</th>
+                        <th>Fecha Otorgamiento</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody></tbody> <!-- Se llena dinámicamente con JS -->
+            </table>
+        </section>
+        <!-- ===============================
+             Sección de gráficos
+             =============================== -->
+        <!-- Gráfico 1: Total de créditos otorgados -->
+        <div class="header">TOTAL DE CRÉDITOS OTORGADOS</div>
+        <canvas id="graficoTotal"></canvas>
+        <!-- Gráfico 2: Créditos por cliente -->
+        <div class="header">CRÉDITOS REGISTRADOS POR CLIENTE</div>
+        <canvas id="graficoCliente"></canvas>
+        <!-- Gráfico 3: Créditos por rango de monto -->
+        <div class="header">CRÉDITOS POR RANGO</div>
+        <canvas id="graficoRango"></canvas>
+    </div>
+    <!-- Script principal con la lógica de interacción -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
